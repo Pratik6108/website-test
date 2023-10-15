@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        /* marquee div container */
+        .marquee {
+            font-size: 2vw;
+            color: #fff;
+            font-family: 'Courier New', Courier, monospace;
+            height: 2.5vw;
+            overflow: hidden;
+            background-color: #000;
+            position: relative;
+        }
+
+        /* nested div inside the container */
+        .marquee>div {
+            display: block;
+            width: 200%;
+            position: absolute;
+            overflow: hidden;
+            animation: marquee 12s linear infinite;
+            padding: 10px;
+        }
+
+        /* span with text */
+        .marquee .text {
+            float: left;
+            width: 50%;
+        }
+
+        /* keyframe */
+        @keyframes marquee {
+            0% {
+                left: 0;
+            }
+
+            100% {
+                left: -100%;
+            }
+        }
+
+        .marquee div:hover {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="marquee">
+        <div>
+            <div class="text">Morality . Mission . Motivation . Mutual respect . Morality . Mission . Motivation . Mutual
+                respect</div>
+            <div class="text">Morality . Mission . Motivation . Mutual respect . Morality . Mission . Motivation . Mutual
+                respect</div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
